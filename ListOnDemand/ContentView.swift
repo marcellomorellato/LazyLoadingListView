@@ -6,56 +6,71 @@
 //
 
 import SwiftUI
-import SwiftData
 
-struct ContentView: View {
-    @Environment(\.modelContext) private var modelContext
-    @Query private var items: [Item]
-
+struct OrderCell: View {
+    let order: Order
+    
     var body: some View {
-        NavigationSplitView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                    } label: {
-                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                    }
-                }
-                .onDelete(perform: deleteItems)
+        HStack {
+            VStack {
+                Text(order.creationDate.formatted(.dateTime.day()))
+                    .font(.title)
+                    .foregroundColor(.secondary)
+                
+                Text(order.creationDate.formatted(.dateTime.month(.twoDigits).year()))
+                    .font(.title)
+                    .foregroundColor(.secondary)
             }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
+            
+            Spacer()
+            
+            VStack(alignment: .leading, spacing: 5) {
+                Text(order.descr)
+                    .font(.headline)
+                    .lineLimit(2)
+                    .multilineTextAlignment(.leading)
+                
+                Text("Code \(order.code)")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
             }
-        } detail: {
-            Text("Select an item")
+            
+            
         }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(timestamp: Date())
-            modelContext.insert(newItem)
-        }
-    }
-
-    private func deleteItems(offsets: IndexSet) {
-        withAnimation {
-            for index in offsets {
-                modelContext.delete(items[index])
-            }
-        }
+        .padding(.vertical, 10)
+        .padding(.horizontal, 16)
     }
 }
 
+
+
+struct ContentView: View {
+    @State private var orders: [Order] = []
+    @State private var currentPage: Int = 0
+    private let batchSize: Int = 50
+    private let totalRecords: Int = 500
+    private let prefetchThrottleDelay: Double = 0.5 // Throttle prefetching by 0.5 seconds
+
+    var body: some View {
+        NavigationView {
+            LazyLoadingListView<[Order], OrderCell>(
+                currentPage: $currentPage,
+                batchSize: batchSize,
+                totalRecords: totalRecords,
+                prefetchThrottleDelay: prefetchThrottleDelay,
+                dataProvider: databaseManager.loadOrders,
+                cell: { order in
+                    OrderCell(order: order)
+                }
+            )
+            .navigationTitle("Lazy Loading Orders")
+        }
+    }
+
+    private let databaseManager = DatabaseManager()
+}
+
+
 #Preview {
     ContentView()
-        .modelContainer(for: Item.self, inMemory: true)
 }

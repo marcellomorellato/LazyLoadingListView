@@ -37,19 +37,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		ADA7FC082AF2241B00105AF4 /* ListOnDemand.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ListOnDemand.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA7FC082AF2241B00105AF4 /* LazyLoadingListView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyLoadingListView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA7FC0B2AF2241B00105AF4 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		ADA7FC0D2AF2241B00105AF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADA7FC0F2AF2241B00105AF4 /* Order.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
 		ADA7FC112AF2241C00105AF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADA7FC142AF2241C00105AF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ADA7FC1A2AF2241C00105AF4 /* ListOnDemandTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListOnDemandTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA7FC1A2AF2241C00105AF4 /* LazyLoadingListViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyLoadingListViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA7FC1E2AF2241C00105AF4 /* ListOnDemandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOnDemandTests.swift; sourceTree = "<group>"; };
-		ADA7FC242AF2241C00105AF4 /* ListOnDemandUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ListOnDemandUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADA7FC242AF2241C00105AF4 /* LazyLoadingListViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LazyLoadingListViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADA7FC282AF2241C00105AF4 /* ListOnDemandUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOnDemandUITests.swift; sourceTree = "<group>"; };
 		ADA7FC2A2AF2241C00105AF4 /* ListOnDemandUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOnDemandUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		ADA7FC372AF224F900105AF4 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		ADA7FC392AF22DF900105AF4 /* LazyLoadingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyLoadingListView.swift; sourceTree = "<group>"; };
+		ADA7FC3B2AF243F800105AF4 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 		ADA7FBFF2AF2241B00105AF4 = {
 			isa = PBXGroup;
 			children = (
+				ADA7FC3B2AF243F800105AF4 /* README.md */,
 				ADA7FC0A2AF2241B00105AF4 /* ListOnDemand */,
 				ADA7FC1D2AF2241C00105AF4 /* ListOnDemandTests */,
 				ADA7FC272AF2241C00105AF4 /* ListOnDemandUITests */,
@@ -90,9 +92,9 @@
 		ADA7FC092AF2241B00105AF4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADA7FC082AF2241B00105AF4 /* ListOnDemand.app */,
-				ADA7FC1A2AF2241C00105AF4 /* ListOnDemandTests.xctest */,
-				ADA7FC242AF2241C00105AF4 /* ListOnDemandUITests.xctest */,
+				ADA7FC082AF2241B00105AF4 /* LazyLoadingListView.app */,
+				ADA7FC1A2AF2241C00105AF4 /* LazyLoadingListViewTests.xctest */,
+				ADA7FC242AF2241C00105AF4 /* LazyLoadingListViewUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,9 +141,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADA7FC072AF2241B00105AF4 /* ListOnDemand */ = {
+		ADA7FC072AF2241B00105AF4 /* LazyLoadingListView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADA7FC2E2AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "ListOnDemand" */;
+			buildConfigurationList = ADA7FC2E2AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "LazyLoadingListView" */;
 			buildPhases = (
 				ADA7FC042AF2241B00105AF4 /* Sources */,
 				ADA7FC052AF2241B00105AF4 /* Frameworks */,
@@ -151,14 +153,14 @@
 			);
 			dependencies = (
 			);
-			name = ListOnDemand;
+			name = LazyLoadingListView;
 			productName = ListOnDemand;
-			productReference = ADA7FC082AF2241B00105AF4 /* ListOnDemand.app */;
+			productReference = ADA7FC082AF2241B00105AF4 /* LazyLoadingListView.app */;
 			productType = "com.apple.product-type.application";
 		};
-		ADA7FC192AF2241C00105AF4 /* ListOnDemandTests */ = {
+		ADA7FC192AF2241C00105AF4 /* LazyLoadingListViewTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADA7FC312AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "ListOnDemandTests" */;
+			buildConfigurationList = ADA7FC312AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "LazyLoadingListViewTests" */;
 			buildPhases = (
 				ADA7FC162AF2241C00105AF4 /* Sources */,
 				ADA7FC172AF2241C00105AF4 /* Frameworks */,
@@ -169,14 +171,14 @@
 			dependencies = (
 				ADA7FC1C2AF2241C00105AF4 /* PBXTargetDependency */,
 			);
-			name = ListOnDemandTests;
+			name = LazyLoadingListViewTests;
 			productName = ListOnDemandTests;
-			productReference = ADA7FC1A2AF2241C00105AF4 /* ListOnDemandTests.xctest */;
+			productReference = ADA7FC1A2AF2241C00105AF4 /* LazyLoadingListViewTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		ADA7FC232AF2241C00105AF4 /* ListOnDemandUITests */ = {
+		ADA7FC232AF2241C00105AF4 /* LazyLoadingListViewUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADA7FC342AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "ListOnDemandUITests" */;
+			buildConfigurationList = ADA7FC342AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "LazyLoadingListViewUITests" */;
 			buildPhases = (
 				ADA7FC202AF2241C00105AF4 /* Sources */,
 				ADA7FC212AF2241C00105AF4 /* Frameworks */,
@@ -187,9 +189,9 @@
 			dependencies = (
 				ADA7FC262AF2241C00105AF4 /* PBXTargetDependency */,
 			);
-			name = ListOnDemandUITests;
+			name = LazyLoadingListViewUITests;
 			productName = ListOnDemandUITests;
-			productReference = ADA7FC242AF2241C00105AF4 /* ListOnDemandUITests.xctest */;
+			productReference = ADA7FC242AF2241C00105AF4 /* LazyLoadingListViewUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ADA7FC032AF2241B00105AF4 /* Build configuration list for PBXProject "ListOnDemand" */;
+			buildConfigurationList = ADA7FC032AF2241B00105AF4 /* Build configuration list for PBXProject "LazyLoadingListView" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,9 +230,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADA7FC072AF2241B00105AF4 /* ListOnDemand */,
-				ADA7FC192AF2241C00105AF4 /* ListOnDemandTests */,
-				ADA7FC232AF2241C00105AF4 /* ListOnDemandUITests */,
+				ADA7FC072AF2241B00105AF4 /* LazyLoadingListView */,
+				ADA7FC192AF2241C00105AF4 /* LazyLoadingListViewTests */,
+				ADA7FC232AF2241C00105AF4 /* LazyLoadingListViewUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -296,12 +298,12 @@
 /* Begin PBXTargetDependency section */
 		ADA7FC1C2AF2241C00105AF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ADA7FC072AF2241B00105AF4 /* ListOnDemand */;
+			target = ADA7FC072AF2241B00105AF4 /* LazyLoadingListView */;
 			targetProxy = ADA7FC1B2AF2241C00105AF4 /* PBXContainerItemProxy */;
 		};
 		ADA7FC262AF2241C00105AF4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = ADA7FC072AF2241B00105AF4 /* ListOnDemand */;
+			target = ADA7FC072AF2241B00105AF4 /* LazyLoadingListView */;
 			targetProxy = ADA7FC252AF2241C00105AF4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -500,7 +502,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListOnDemand.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ListOnDemand";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyLoadingListView.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LazyLoadingListView";
 			};
 			name = Debug;
 		};
@@ -520,7 +522,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ListOnDemand.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ListOnDemand";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LazyLoadingListView.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LazyLoadingListView";
 			};
 			name = Release;
 		};
@@ -563,7 +565,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADA7FC032AF2241B00105AF4 /* Build configuration list for PBXProject "ListOnDemand" */ = {
+		ADA7FC032AF2241B00105AF4 /* Build configuration list for PBXProject "LazyLoadingListView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADA7FC2C2AF2241C00105AF4 /* Debug */,
@@ -572,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADA7FC2E2AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "ListOnDemand" */ = {
+		ADA7FC2E2AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "LazyLoadingListView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADA7FC2F2AF2241C00105AF4 /* Debug */,
@@ -581,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADA7FC312AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "ListOnDemandTests" */ = {
+		ADA7FC312AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "LazyLoadingListViewTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADA7FC322AF2241C00105AF4 /* Debug */,
@@ -590,7 +592,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADA7FC342AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "ListOnDemandUITests" */ = {
+		ADA7FC342AF2241C00105AF4 /* Build configuration list for PBXNativeTarget "LazyLoadingListViewUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADA7FC352AF2241C00105AF4 /* Debug */,
